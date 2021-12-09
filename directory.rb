@@ -26,7 +26,26 @@ def input_students
   students
 end
 
-students = input_students
-print_header
-print_name(students)
-print_footer(students)
+def interactive_menu 
+  students = []
+  loop do 
+    puts "1. Input students"
+    puts "2. Print student list"
+    puts "9. Exit"
+    selection = gets.chomp
+    case selection
+    when "1"
+      students = input_students
+    when "2"
+      print_name(students)
+      print_header
+      print_footer(students)
+    when "9" 
+      exit 
+    else 
+      puts "I don't understand, try again."
+    end
+  end
+end
+
+interactive_menu
