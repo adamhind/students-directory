@@ -47,6 +47,8 @@ def process(selection)
    show_students
   when "3"
     save_students
+  when "4"
+    load_students
   when "9" 
     exit 
   else 
@@ -80,5 +82,4 @@ def load_students
   file.close
 end 
 
-load_students
 interactive_menu
